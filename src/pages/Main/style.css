@@ -1,0 +1,228 @@
+ul,
+ol {
+  list-style-type: none;
+}
+.main__preview {
+  background-color: #201a1a;
+  padding: 5rem 0;
+}
+.main__preview-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__preview-title {
+  color: #fff;
+  text-align: center;
+  font-family: Garamond;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.main__preview-btn {
+  padding: 1.3rem 3.4rem;
+  margin-top: 6rem;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #ffffff00;
+  cursor: pointer;
+}
+.main__about {
+  padding: 6rem 0;
+}
+.main__about-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.main__about-title {
+  color: #131010;
+  font-family: Garamond;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 77.778% */
+  text-transform: uppercase;
+}
+.main__about-desc {
+  color: #131010;
+  text-align: justify;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__about-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.main__about_list {
+  display: flex;
+  gap: 2.4rem;
+}
+.main__about-item div {
+  color: #131010;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main__about-item p {
+  color: #131010;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main__about-button {
+  border: 1px solid #201a1a;
+  color: #201a1a;
+  background-color: #ffffff00;
+  padding: 1.3rem 3.4rem;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+.main__values {
+  background-color: #201a1a;
+  padding: 5rem 0;
+}
+.main__values-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+.main__values-title {
+  color: #fff;
+  font-family: Garamond;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 77.778% */
+  text-transform: uppercase;
+}
+.main__values-list {
+  display: flex;
+  justify-content: space-between;
+}
+.main__values-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.main__values-item img {
+  width: 5rem;
+}
+.main__values-item p {
+  color: #fff;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__works {
+  padding: 5rem 0;
+}
+.main__works-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.main__works-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__works-title {
+  color: #131010;
+  font-family: Garamond;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 77.778% */
+  text-transform: uppercase;
+}
+.main__works-btn {
+  border: 1px solid #201a1a;
+  color: #201a1a;
+  background-color: #ffffff00;
+  padding: 1.3rem 3.4rem;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+.main__how {
+  background-color: #201a1a;
+  padding: 5rem 0;
+}
+.main__how-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.main__how-title {
+  color: #fff;
+  font-family: Garamond;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.main__how-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__how-card {
+  background-color: #fff;
+  width: 20%;
+}
+.main__how-card img {
+  width: 100%;
+}
+.main__how-card p {
+  color: #131010;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 2rem 1rem;
+}
+.main__collabe {
+  padding: 5rem 0;
+}
+.main__collabe-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.main__collabe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.6rem;
+}

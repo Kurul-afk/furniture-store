@@ -1,7 +1,7 @@
 import React from "react";
 
 const CustomCarousel = () => {
-  return <div></div>;
+  return <div>Carousel</div>;
 };
 
 export default CustomCarousel;

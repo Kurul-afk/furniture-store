@@ -1,0 +1,32 @@
+.main__collabe-item {
+  width: 20%;
+  border: 1px solid #201a1a;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.main__collabe-num {
+  color: #201a1a;
+  font-family: Garamond;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 41.667% */
+  text-transform: uppercase;
+}
+.main__collabe-item__title {
+  color: #201a1a;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 140% */
+  text-transform: uppercase;
+}
+.main__collabe-item__desc {
+  color: #201a1a;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
