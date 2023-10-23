@@ -3,6 +3,9 @@ import "./style.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@mui/base";
 import CustomCarousel from "../../components/CustomCarousel";
+import CollabeCard from "../../components/MainElements/CollabeCard";
+import CustomAccordion from "../../components/CustomAccordion";
+
 
 // img
 import firstValueImg from "../../img/eco.svg";
@@ -13,8 +16,6 @@ import howImg1 from "../../img/how1.png";
 import howImg2 from "../../img/how2.png";
 import howImg3 from "../../img/how3.png";
 import howImg4 from "../../img/how4.png";
-import CollabeCard from "../../components/MainElements/CollabeCard";
-
 interface howCardImg {
   how1: string;
   how2: string;
@@ -131,7 +132,7 @@ const Main = () => {
       <section className="main__collabe">
         <div className="main__collabe-container">
           <h3 className="main__collabe-title">Как происходит сотрудничество</h3>
-          <ul className="main__collabe-list">
+          <ol className="main__collabe-list">
             <CollabeCard
               num="1"
               title="Выбор изделия"
@@ -172,14 +173,21 @@ const Main = () => {
               title="доставка"
               desc="Мы бережно транспортируем и устанавливаем готовое изделие"
             />
-          </ul>
+          </ol>
         </div>
       </section>
       <section className="main__faq">
-        <div className="main__faq-container"></div>
+        <div className="main__faq-container">
+          <h3 className="main__faq-title">Вопросы и ответы</h3>
+          <div className="main__faq-accordions">
+            <CustomAccordion title='Panel 1' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
+            <CustomAccordion title='Panel 2' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
+            <CustomAccordion title='Panel 3' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
+            <CustomAccordion title='Panel 4' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
+          </div>
+        </div>
       </section>
     </div>
   );
 };
-
 export default Main;
