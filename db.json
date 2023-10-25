@@ -1,5 +1,18 @@
 {
-  "users": {},
-  "products": {},
-  "favorite": {}
+  "users": [
+    {
+      "email": "arsenshergaziev@gmail.com",
+      "password": "qwerty",
+      "password_confirm": "qwerty",
+      "id": 1
+    },
+    {
+      "email": "doyouliketwix@gmail.com",
+      "password": "qwerty",
+      "password_confirm": "qwerty",
+      "id": 2
+    }
+  ],
+  "products": [],
+  "favorite": []
 }

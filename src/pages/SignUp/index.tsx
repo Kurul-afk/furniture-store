@@ -2,6 +2,7 @@ import { Button, TextField } from "@mui/material";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../../context/authContext";
 
 const SignUp = () => {
   const {
@@ -14,7 +15,11 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
-  const onSubmit = (data: any) => {};
+  const {handleSignUp} = useAuthContext()
+
+  const onSubmit = (data: any) => {
+    handleSignUp(data, navigate)
+  };
 
   const pwd = watch("password");
 
@@ -59,7 +64,9 @@ const SignUp = () => {
         <Controller
           control={control}
           name="password_confirm"
-          rules={{ required: "password confirm is required" }}
+          rules={{ required: "password confirm is required",
+          validate: (value) => value == pwd || 'Пароли не совпадают!'
+         }}
           render={({ field }) => (
             <TextField
               label="password_confirm"
@@ -79,6 +86,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-// {
-//       <Button variant="outlined">Outlined</Button> */
-// }
