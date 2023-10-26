@@ -7,6 +7,7 @@ interface authContextI {
   loading: boolean;
   handleSignUp: any;
   handleSignIn: any;
+  handleLogOut: any;
 }
 
 const initVal = {
@@ -14,7 +15,8 @@ const initVal = {
   error: "",
   loading: false,
   handleSignUp: () => {},
-  handleSignIn: ()=>{}
+  handleSignIn: () => {},
+  handleLogOut: () => {},
 };
 
 interface UserI {
@@ -52,33 +54,50 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
 
   const handleSignIn = async (
     user: UserI,
-     navigate: (value: string) => void
-    ) => {
+    navigate: (value: string) => void
+  ) => {
     setLoading(true);
     try {
       const response = await axios.get(`${API}/users`);
       const data = response.data;
-      const findUser = data.find((item: UserI) => (
-        item.email === user.email && item.password === user.password
-      ));
-      console.log(findUser)
-      console.log(data)
-      if(findUser){
-        setCurrentUser(user.email)
-        localStorage.setItem("email", user.email)
-        navigate('/')
+      const findUser = data.find(
+        (item: UserI) =>
+          item.email === user.email && item.password === user.password
+      );
+      console.log(findUser);
+      console.log(data);
+      if (findUser) {
+        setCurrentUser(user.email);
+        localStorage.setItem("email", user.email);
+        navigate("/");
       } else {
-        console.log('Пользователь не найден!')
+        console.log("Пользователь не найден!");
       }
     } catch (error) {
-      console.log(error)
-    } finally{
-      setLoading(false)
+      console.log(error);
+    } finally {
+      setLoading(false);
     }
-  }
+  };
+
+  const handleLogOut = (navigate: (value: string) => void) => {
+    setLoading(true);
+    localStorage.removeItem("email");
+    navigate("/sign-in");
+    setLoading(false);
+  };
 
   return (
-    <authContext.Provider value={{ currentUser, error, loading, handleSignUp, handleSignIn }}>
+    <authContext.Provider
+      value={{
+        currentUser,
+        error,
+        loading,
+        handleSignUp,
+        handleSignIn,
+        handleLogOut,
+      }}
+    >
       {children}
     </authContext.Provider>
   );

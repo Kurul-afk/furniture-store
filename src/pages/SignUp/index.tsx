@@ -15,10 +15,10 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
-  const {handleSignUp} = useAuthContext()
+  const { handleSignUp } = useAuthContext();
 
   const onSubmit = (data: any) => {
-    handleSignUp(data, navigate)
+    handleSignUp(data, navigate);
   };
 
   const pwd = watch("password");
@@ -64,9 +64,10 @@ const SignUp = () => {
         <Controller
           control={control}
           name="password_confirm"
-          rules={{ required: "password confirm is required",
-          validate: (value) => value == pwd || 'Пароли не совпадают!'
-         }}
+          rules={{
+            required: "password confirm is required",
+            validate: (value) => value == pwd || "Пароли не совпадают!",
+          }}
           render={({ field }) => (
             <TextField
               label="password_confirm"

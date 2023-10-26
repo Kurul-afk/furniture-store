@@ -1,0 +1,36 @@
+.card {
+  width: 30%;
+}
+.card__link {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: border-color 0.3s;
+}
+.card__link:hover {
+  border: 1px solid #fffcf4;
+}
+.card__img {
+  width: 100%;
+}
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card__title {
+  color: #fffcf4;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.card__desc {
+  color: #fffcf4;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

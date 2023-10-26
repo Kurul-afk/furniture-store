@@ -1,0 +1,12 @@
+.ourWork {
+  background-color: #201a1a;
+}
+.ourWork__container {
+  width: 80%;
+  margin: 0 auto;
+}
+.ourWork__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}

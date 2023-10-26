@@ -11,6 +11,12 @@
       "password": "qwerty",
       "password_confirm": "qwerty",
       "id": 2
+    },
+    {
+      "email": "kurultepes999@gmail.com",
+      "password": "12345",
+      "password_confirm": "12345",
+      "id": 3
     }
   ],
   "products": [],
