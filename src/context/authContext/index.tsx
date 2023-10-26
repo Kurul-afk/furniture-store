@@ -8,6 +8,7 @@ interface authContextI {
   handleSignUp: any;
   handleSignIn: any;
   handleLogOut: any;
+  setCurrentUser: any;
 }
 
 const initVal = {
@@ -17,6 +18,7 @@ const initVal = {
   handleSignUp: () => {},
   handleSignIn: () => {},
   handleLogOut: () => {},
+  setCurrentUser: () => {},
 };
 
 interface UserI {
@@ -83,6 +85,7 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   const handleLogOut = (navigate: (value: string) => void) => {
     setLoading(true);
     localStorage.removeItem("email");
+    setCurrentUser("");
     navigate("/sign-in");
     setLoading(false);
   };
@@ -91,6 +94,7 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
     <authContext.Provider
       value={{
         currentUser,
+        setCurrentUser,
         error,
         loading,
         handleSignUp,

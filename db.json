@@ -17,6 +17,12 @@
       "password": "12345",
       "password_confirm": "12345",
       "id": 3
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "admin",
+      "password_confirm": "admin",
+      "id": 4
     }
   ],
   "products": [],

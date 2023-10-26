@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import CustomCard from "../../components/CustomCard";
+import CustomPagination from "../../components/CustomPagination";
 
 const OurWork = () => {
   return (
@@ -14,6 +15,7 @@ const OurWork = () => {
           <CustomCard />
           <CustomCard />
         </ul>
+        <CustomPagination />
       </div>
     </div>
   );

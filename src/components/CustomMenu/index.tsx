@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -8,7 +8,7 @@ import { useAuthContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 
 const CustomMenu = () => {
-  const { handleLogOut } = useAuthContext();
+  const { handleLogOut, currentUser } = useAuthContext();
 
   const navigate = useNavigate();
 
@@ -17,6 +17,9 @@ const CustomMenu = () => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const isAdmin = localStorage.getItem("email") === "admin@gmail.com";
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -47,6 +50,15 @@ const CustomMenu = () => {
       >
         <MenuItem onClick={handleClose}>Профиль</MenuItem>
         <MenuItem onClick={handleClose}>Мой аккаунт</MenuItem>
+        {isAdmin && (
+          <>
+            <MenuItem onClick={handleClose}>Добавить товар</MenuItem>
+            <MenuItem onClick={handleClose}>
+              Посмотреть всех пользователей
+            </MenuItem>
+            <MenuItem onClick={handleClose}>Изменить товар</MenuItem>
+          </>
+        )}
         <MenuItem onClick={menuLogOut}>Выйти</MenuItem>
       </Menu>
     </div>
