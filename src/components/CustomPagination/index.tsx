@@ -1,5 +1,6 @@
 import { Pagination } from "@mui/material";
 import React from "react";
+import "./style.css";
 
 const CustomPagination = () => {
   return (

@@ -9,6 +9,7 @@ interface authContextI {
   handleSignIn: any;
   handleLogOut: any;
   setCurrentUser: any;
+  isAdmin: any;
 }
 
 const initVal = {
@@ -19,6 +20,7 @@ const initVal = {
   handleSignIn: () => {},
   handleLogOut: () => {},
   setCurrentUser: () => {},
+  isAdmin: "",
 };
 
 interface UserI {
@@ -38,6 +40,7 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
   const [currentUser, setCurrentUser] = useState<string>("");
   const [error, setError] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const isAdmin = localStorage.getItem("email") === "admin@gmail.com";
 
   const handleSignUp = async (
     user: UserI,
@@ -100,6 +103,7 @@ const AuthContextProvider = ({ children }: { children: ReactNode }) => {
         handleSignUp,
         handleSignIn,
         handleLogOut,
+        isAdmin,
       }}
     >
       {children}

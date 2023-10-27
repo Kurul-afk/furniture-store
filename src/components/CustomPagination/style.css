@@ -1,0 +1,15 @@
+.MuiPaginationItem-root {
+  color: white !important;
+  border-color: #fff !important;
+  margin: 2.5rem 0.2rem !important;
+}
+.MuiPaginationItem-root.Mui-selected {
+  background-color: #ffffff54 !important;
+  color: #201a1a !important;
+  border-color: #201a1a !important;
+}
+.MuiPaginationItem-root.Mui-selected:hover {
+  background-color: #ffffff88 !important;
+  color: #201a1a !important;
+  border-color: #201a1a !important;
+}

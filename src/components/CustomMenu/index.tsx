@@ -8,7 +8,7 @@ import { useAuthContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 
 const CustomMenu = () => {
-  const { handleLogOut, currentUser } = useAuthContext();
+  const { handleLogOut, currentUser, isAdmin } = useAuthContext();
 
   const navigate = useNavigate();
 
@@ -18,8 +18,6 @@ const CustomMenu = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  const isAdmin = localStorage.getItem("email") === "admin@gmail.com";
-
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -28,6 +26,19 @@ const CustomMenu = () => {
     handleLogOut(navigate);
     setAnchorEl(null);
   };
+
+  const userPage = () => {
+    navigate("/user-page");
+    setAnchorEl(null);
+  };
+
+  // Admin btn func
+
+  const handleAddProduct = () => {
+    navigate("/add-product");
+    setAnchorEl(null);
+  };
+
   return (
     <div>
       <Button
@@ -48,15 +59,14 @@ const CustomMenu = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>Профиль</MenuItem>
-        <MenuItem onClick={handleClose}>Мой аккаунт</MenuItem>
+        <MenuItem onClick={userPage}>Профиль</MenuItem>
         {isAdmin && (
           <>
-            <MenuItem onClick={handleClose}>Добавить товар</MenuItem>
+            <MenuItem onClick={handleAddProduct}>Добавить товар</MenuItem>
             <MenuItem onClick={handleClose}>
               Посмотреть всех пользователей
             </MenuItem>
-            <MenuItem onClick={handleClose}>Изменить товар</MenuItem>
+            <MenuItem onClick={handleClose}>Cписок всех товаров</MenuItem>
           </>
         )}
         <MenuItem onClick={menuLogOut}>Выйти</MenuItem>
