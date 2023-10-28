@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import CustomCard from "../../components/CustomCard";
 import CustomPagination from "../../components/CustomPagination";
+import { useProductContext } from "../../context/productContext";
+import { useSearchParams } from "react-router-dom";
 
 const OurWork = () => {
+  const { products, getProducts } = useProductContext();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    const page = parseInt(searchParams.get("_page") || "1");
+    console.log(products, page);
+    getProducts(page);
+  }, [searchParams]);
+
   return (
     <div className="ourWork">
       <div className="ourWork__container">
         <ul className="ourWork__list">
-          <CustomCard />
-          <CustomCard />
-          <CustomCard />
-          <CustomCard />
-          <CustomCard />
-          <CustomCard />
+          {products.map((item: any) => (
+            <CustomCard product={item} key={item.key} />
+          ))}
         </ul>
         <CustomPagination />
       </div>

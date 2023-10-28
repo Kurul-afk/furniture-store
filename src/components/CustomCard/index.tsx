@@ -2,21 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-const CustomCard = () => {
+const CustomCard = ({ product }: any) => {
   return (
     <li className="card">
       <Link className="card__link" to={"/"}>
-        <img
-          className="card__img"
-          src="https://www.scandesigns.com/wp-content/uploads/2020/04/Space-5100S-Trend-Graphite-Angle-300x300.jpg"
-          alt="img"
-        />
+        <img className="card__img" src={product.url_img} alt="img" />
         <div className="card__text">
-          <h3 className="card__title">Lorem</h3>
-          <p className="card__desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-            delectus sequi corrupti tenetur numquam aliquid.
-          </p>
+          <h3 className="card__title">{product.title}</h3>
+          <p className="card__desc">{product.desc}</p>
         </div>
       </Link>
     </li>

@@ -25,6 +25,35 @@
       "id": 4
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "title": "LOREM",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eos, facilis beatae voluptatem at pariatur!",
+      "price": "423",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
+      "id": 1
+    },
+    {
+      "title": "asdfgh",
+      "desc": "asdfgh",
+      "price": "312",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
+      "id": 2
+    },
+    {
+      "title": "asdfghdasda",
+      "desc": "asdfghasda",
+      "price": "31221",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
+      "id": 3
+    },
+    {
+      "title": "asdfghdasdasadad",
+      "desc": "asdfghasdaasdas",
+      "price": "3122132",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
+      "id": 4
+    }
+  ],
   "favorite": []
 }

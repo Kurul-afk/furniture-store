@@ -1,21 +1,23 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuthContext } from "../../context/authContext";
 import { Controller, useForm } from "react-hook-form";
 import { Button, TextField } from "@mui/material";
 import "./style.css";
+import { useProductContext } from "../../context/productContext";
 
 const AddProduct = () => {
   const {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm();
 
-  const navigate = useNavigate();
+  const { createProduct } = useProductContext();
 
   const onSubmit = (data: any) => {
     console.log(data);
+    createProduct(data);
+    reset();
   };
 
   return (
