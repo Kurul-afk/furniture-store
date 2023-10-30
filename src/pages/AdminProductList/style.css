@@ -1,0 +1,49 @@
+.adminProductList {
+  background-color: #201a1a;
+}
+.adminProductList__container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.adminProductList__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.admin__CustomCard {
+  width: 30%;
+}
+.admin__CustomCard .card {
+  width: 100%;
+}
+.settings__btns {
+  width: 100%;
+}
+.settings__btn {
+  width: 50%;
+  height: 2.5rem;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}
+.edit {
+  background-color: #829460;
+  border-radius: 5px 0 0 5px;
+  transition: 0.3s;
+}
+.edit:hover {
+  background-color: #97ac70;
+  color: #fff;
+}
+.delete {
+  background-color: #f96666;
+  border-radius: 0 5px 5px 0;
+  transition: 0.3s;
+}
+.delete:hover {
+  background-color: #fc8181;
+  color: #fff;
+}

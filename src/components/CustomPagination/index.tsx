@@ -1,3 +1,5 @@
+// CustomPagination.js
+
 import { Pagination } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "./style.css";
@@ -12,16 +14,18 @@ const CustomPagination = () => {
   useEffect(() => {
     const current = parseInt(searchParams.get("_page") || "1");
     setCurrentPage(current);
-  }, [searchParams, currentPage]);
+  }, [searchParams]);
 
   const handleChangePage = (event: React.ChangeEvent<unknown>, page: any) => {
     searchParams.set("_page", page);
     setSearchParams(searchParams);
+    setCurrentPage(page);
   };
   return (
     <>
       <Pagination
         count={pages}
+        page={currentPage}
         variant="outlined"
         shape="rounded"
         onChange={handleChangePage}

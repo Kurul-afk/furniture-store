@@ -1,3 +1,5 @@
+// OurWork.js
+
 import React, { useEffect } from "react";
 import "./style.css";
 import CustomCard from "../../components/CustomCard";
@@ -10,9 +12,7 @@ const OurWork = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    const page = parseInt(searchParams.get("_page") || "1");
-    console.log(products, page);
-    getProducts(page);
+    getProducts(searchParams.get("_page") || 1);
   }, [searchParams]);
 
   return (

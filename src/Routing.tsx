@@ -12,6 +12,8 @@ import { useAuthContext } from "./context/authContext";
 import AddProduct from "./pages/AddProduct";
 import UserPage from "./pages/UserPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import ProductPage from "./pages/ProductPage";
+import AdminProductList from "./pages/AdminProductList";
 
 const Routing = () => {
   const { isAdmin, currentUser } = useAuthContext();
@@ -30,10 +32,12 @@ const Routing = () => {
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="/product-page" element={<ProductPage />} />
       <Route element={<UserRoute />}>
         <Route path="/user-page" element={<UserPage />} />
         <Route element={<AdminRoute />}>
           <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/admin-product-list" element={<AdminProductList />} />
         </Route>
       </Route>
     </Routes>

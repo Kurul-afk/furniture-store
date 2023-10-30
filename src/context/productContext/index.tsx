@@ -1,5 +1,6 @@
 import axios from "axios";
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer, useState } from "react";
+import { toast } from "react-toastify";
 interface ProductContextI {
   products: any;
   product: any;
@@ -8,6 +9,8 @@ interface ProductContextI {
   pages: any;
   createProduct: (product: any) => void;
   getProducts: (_page: any) => void;
+  deleteProduct: (id: number) => void;
+  isProductDeleted: boolean;
 }
 const INIT_STATE = {
   products: [],
@@ -17,6 +20,8 @@ const INIT_STATE = {
   pages: 0,
   createProduct: (product: any) => {},
   getProducts: (_page: any) => {},
+  deleteProduct: (id: number) => {},
+  isProductDeleted: false,
 };
 
 const reducer = (state = INIT_STATE, action: any) => {
@@ -37,7 +42,7 @@ const reducer = (state = INIT_STATE, action: any) => {
   }
 };
 
-const LIMIT = 3;
+const LIMIT = 6;
 
 const API = "http://localhost:8000";
 
@@ -49,11 +54,13 @@ export const useProductContext = () => {
 
 const ProductContextProvider = ({ children }: any) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  const [isProductDeleted, setIsProductDeleted] = useState(false);
 
   const createProduct = async (product: any) => {
     try {
       console.log(product);
       await axios.post(`${API}/products`, product);
+      toast.success("Вы добавили новый продукт!");
     } catch (error) {
       console.log(error);
     }
@@ -74,6 +81,18 @@ const ProductContextProvider = ({ children }: any) => {
       console.log(error);
     }
   };
+
+  const deleteProduct = async (id: number) => {
+    try {
+      console.log(id);
+      await axios.delete(`${API}/products/${id}`);
+      toast.warning("Вы удалили данный продукт!");
+      setIsProductDeleted(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <productContext.Provider
       value={{
@@ -84,6 +103,8 @@ const ProductContextProvider = ({ children }: any) => {
         pages: state.pages,
         createProduct,
         getProducts,
+        deleteProduct,
+        isProductDeleted,
       }}
     >
       {children}

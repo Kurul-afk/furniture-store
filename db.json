@@ -27,32 +27,81 @@
   ],
   "products": [
     {
-      "title": "LOREM",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eos, facilis beatae voluptatem at pariatur!",
-      "price": "423",
-      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
-      "id": 1
-    },
-    {
-      "title": "asdfgh",
-      "desc": "asdfgh",
-      "price": "312",
-      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
+      "title": "Винтажный Шкаф из Махагони",
+      "desc": "Этот винтажный шкаф из махагони – это настоящий произведение искусства. Его темное дерево и изысканные резные детали делают его великолепным выбором для хранения и декора.",
+      "price": "500",
+      "url_img": "https://kondoor.ru/assets/cache_image/7-1_323x280_9cd.jpg",
       "id": 2
     },
     {
-      "title": "asdfghdasda",
-      "desc": "asdfghasda",
-      "price": "31221",
-      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
+      "title": "Сосновый Столик для Кофе",
+      "desc": "Этот столик для кофе из сосны привнесет натуральный и свежий вид в вашу гостиную. Он идеально подходит для утреннего кофе или чаепития с друзьями.",
+      "price": "200",
+      "url_img": "https://kondoor.ru/assets/cache_image/7-1_323x280_9cd.jpg",
       "id": 3
     },
     {
-      "title": "asdfghdasdasadad",
-      "desc": "asdfghasdaasdas",
-      "price": "3122132",
-      "url_img": "https://kondoor.ru/assets/cache_image/works/works-2_315x280_323.jpg",
+      "title": "Ореховый Барный Стул",
+      "desc": "Этот барный стул из орехового дерева обладает изящным дизайном и комфортным сиденьем. Он идеально подходит для бара или кухонного острова.",
+      "price": "450",
+      "url_img": "https://kondoor.ru/assets/cache_image/d6_323x280_9cd.jpg",
       "id": 4
+    },
+    {
+      "title": "Буковый Письменный Стол",
+      "desc": " Этот буковый письменный стол станет идеальным местом для работы или учебы. Он оборудован выдвижными ящиками для хранения письменных принадлежностей.",
+      "price": "433",
+      "url_img": "https://kondoor.ru/assets/cache_image/d57-5_323x280_9cd.jpg",
+      "id": 5
+    },
+    {
+      "title": "Кедровый Кресло-качалка",
+      "desc": "Расслабьтесь в этом удивительно удобном кедровом кресле-качалке. Его ароматное дерево и мягкая подушка создадут идеальное место для отдыха.",
+      "price": "900",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/gostinye/12-1_323x280_9cd.jpg",
+      "id": 6
+    },
+    {
+      "title": " Палисандровая Тумба для Телевизора",
+      "desc": "Эта палисандровая тумба добавит роскоши и стиля в вашу гостиную. Она имеет открытые полки и закрытые отсеки для хранения мультимедийной техники.",
+      "price": "1200",
+      "url_img": "https://kondoor.ru/assets/cache_image/%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B5%D1%82%D1%8B/k16-1_323x280_9cd.jpg",
+      "id": 7
+    },
+    {
+      "title": "Дубовая Полка для Книг",
+      "desc": "Эта дубовая полка для книг - это идеальное решение для организации вашей библиотеки. Ее прочная конструкция обеспечит долгий срок службы.",
+      "price": "2000",
+      "url_img": "https://kondoor.ru/assets/cache_image/%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B5%D1%82%D1%8B/k14_323x280_9cd.jpg",
+      "id": 8
+    },
+    {
+      "title": "Ясеневый Скамейка для Парка",
+      "desc": "Эта ясеневая скамейка прекрасно впишется в ландшафт вашего парка или сада. Она устойчива к погодным условиям и обеспечит комфортное место для отдыха.",
+      "price": "700",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/garderob/15-1_323x280_9cd.jpg",
+      "id": 9
+    },
+    {
+      "title": "Мербау Ванная Комната",
+      "desc": "Эта ванная комната из мербау создана с учетом стиля и функциональности. Она включает в себя раковину, зеркало и множество полок для хранения.",
+      "price": "555",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/garderob/14-1_323x280_9cd.jpg",
+      "id": 10
+    },
+    {
+      "title": "Тиковый Стул-качалка",
+      "desc": "Этот тиковый стул-качалка - это отличное решение для релакса на веранде или в саду. Тиковое дерево обладает устойчивостью к влаге и насекомым.",
+      "price": "250",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/garderob/14-1_323x280_9cd.jpg",
+      "id": 11
+    },
+    {
+      "title": "Пихтовый Шкафчик для Обуви",
+      "desc": "Этот пихтовый шкафчик идеально подходит для хранения вашей обуви. С его помощью вы сможете легко организовать ваши пары и сохранить порядок.",
+      "price": "600",
+      "url_img": "https://kondoor.ru/assets/cache_image/works/garderob/14-1_323x280_9cd.jpg",
+      "id": 12
     }
   ],
   "favorite": []

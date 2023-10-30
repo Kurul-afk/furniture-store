@@ -39,6 +39,10 @@ const CustomMenu = () => {
     setAnchorEl(null);
   };
 
+  const handleShowAdminProductList = () => {
+    navigate("/admin-product-list");
+    setAnchorEl(null);
+  };
   return (
     <div>
       <Button
@@ -66,7 +70,9 @@ const CustomMenu = () => {
             <MenuItem onClick={handleClose}>
               Посмотреть всех пользователей
             </MenuItem>
-            <MenuItem onClick={handleClose}>Cписок всех товаров</MenuItem>
+            <MenuItem onClick={handleShowAdminProductList}>
+              Cписок всех товаров
+            </MenuItem>
           </>
         )}
         <MenuItem onClick={menuLogOut}>Выйти</MenuItem>
