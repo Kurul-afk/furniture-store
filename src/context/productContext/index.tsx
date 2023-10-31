@@ -11,6 +11,8 @@ interface ProductContextI {
   getProducts: (_page: any) => void;
   deleteProduct: (id: number) => void;
   isProductDeleted: boolean;
+  editProduct: (product: any, id: number) => void;
+  getProductById: (id: number) => void;
 }
 const INIT_STATE = {
   products: [],
@@ -22,6 +24,8 @@ const INIT_STATE = {
   getProducts: (_page: any) => {},
   deleteProduct: (id: number) => {},
   isProductDeleted: false,
+  editProduct: (product: any, id: number) => {},
+  getProductById: (id: number) => {},
 };
 
 const reducer = (state = INIT_STATE, action: any) => {
@@ -60,7 +64,7 @@ const ProductContextProvider = ({ children }: any) => {
     try {
       console.log(product);
       await axios.post(`${API}/products`, product);
-      toast.success("Вы добавили новый продукт!");
+      toast.success("Вы добавили новый продукт!", { position: "top-center" });
     } catch (error) {
       console.log(error);
     }
@@ -82,12 +86,31 @@ const ProductContextProvider = ({ children }: any) => {
     }
   };
 
+  const getProductById = async (id: number) => {
+    try {
+      const { data } = await axios(`${API}/products/${id}`);
+      dispatch({
+        type: "GET_PRODUCT",
+        payload: data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const deleteProduct = async (id: number) => {
     try {
       console.log(id);
       await axios.delete(`${API}/products/${id}`);
-      toast.warning("Вы удалили данный продукт!");
+      toast.warning("Вы удалили данный продукт!", { position: "top-center" });
       setIsProductDeleted(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const editProduct = async (product: any, id: number) => {
+    try {
+      await axios.patch(`${API}/products/${id}`, product);
     } catch (error) {
       console.log(error);
     }
@@ -105,6 +128,8 @@ const ProductContextProvider = ({ children }: any) => {
         getProducts,
         deleteProduct,
         isProductDeleted,
+        editProduct,
+        getProductById,
       }}
     >
       {children}

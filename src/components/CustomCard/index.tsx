@@ -7,7 +7,7 @@ const CustomCard = ({ product }: any) => {
   return (
     <>
       <li className="card">
-        <Link className="card__link" to={"/"}>
+        <Link className="card__link" to={`/product-page/${product.id}`}>
           <img className="card__img" src={product.url_img} alt="img" />
           <div className="card__text">
             <h3 className="card__title">{product.title}</h3>

@@ -1,0 +1,44 @@
+.detail {
+  background-color: #201a1a;
+  padding: 2.5rem 0;
+}
+.detail__container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3.5rem;
+}
+.detail__img {
+  max-width: 900px;
+  width: 80%;
+}
+.detail__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.detail__title {
+  font-size: 3.2rem;
+  color: #fff;
+}
+.detail__cost {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.detail__desc {
+  font-size: 1rem;
+  color: #fff;
+}
+.detail__btn {
+  width: 40%;
+  padding: 1.3rem 3.4rem;
+  margin-top: 6rem;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #ffffff00;
+  cursor: pointer;
+}

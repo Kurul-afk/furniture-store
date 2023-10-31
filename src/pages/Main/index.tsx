@@ -6,7 +6,6 @@ import CustomCarousel from "../../components/CustomCarousel";
 import CollabeCard from "../../components/MainElements/CollabeCard";
 import CustomAccordion from "../../components/CustomAccordion";
 
-
 // img
 import firstValueImg from "../../img/eco.svg";
 import secondValueImg from "../../img/Vector 4.svg";
@@ -180,10 +179,22 @@ const Main = () => {
         <div className="main__faq-container">
           <h3 className="main__faq-title">Вопросы и ответы</h3>
           <div className="main__faq-accordions">
-            <CustomAccordion title='Panel 1' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
-            <CustomAccordion title='Panel 2' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
-            <CustomAccordion title='Panel 3' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
-            <CustomAccordion title='Panel 4' content='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam.'/>
+            <CustomAccordion
+              title="Panel 1"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam."
+            />
+            <CustomAccordion
+              title="Panel 2"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam."
+            />
+            <CustomAccordion
+              title="Panel 3"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam."
+            />
+            <CustomAccordion
+              title="Panel 4"
+              content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum blanditiis similique eligendi magnam debitis vitae doloremque? Delectus, eius neque? Pariatur at neque minus aliquam."
+            />
           </div>
         </div>
       </section>
