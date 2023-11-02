@@ -34,3 +34,8 @@
   font-weight: 400;
   line-height: normal;
 }
+.card__price {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}

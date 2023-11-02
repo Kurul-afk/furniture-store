@@ -6,6 +6,7 @@ import CustomCard from "../../components/CustomCard";
 import CustomPagination from "../../components/CustomPagination";
 import { useProductContext } from "../../context/productContext";
 import { useSearchParams } from "react-router-dom";
+import CustomSearchInput from "../../components/CustomSearchInput";
 
 const OurWork = () => {
   const { products, getProducts } = useProductContext();
@@ -18,6 +19,7 @@ const OurWork = () => {
   return (
     <div className="ourWork">
       <div className="ourWork__container">
+        <CustomSearchInput />
         <ul className="ourWork__list">
           {products.map((item: any) => (
             <CustomCard product={item} key={item.key} />

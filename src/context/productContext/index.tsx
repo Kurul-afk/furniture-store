@@ -1,31 +1,13 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer, useState } from "react";
 import { toast } from "react-toastify";
-interface ProductContextI {
-  products: any;
-  product: any;
-  categories: any;
-  category: any;
-  pages: any;
-  createProduct: (product: any) => void;
-  getProducts: (_page: any) => void;
-  deleteProduct: (id: number) => void;
-  isProductDeleted: boolean;
-  editProduct: (product: any, id: number) => void;
-  getProductById: (id: number) => void;
-}
+
 const INIT_STATE = {
   products: [],
   product: {},
   categories: [],
   category: "",
   pages: 0,
-  createProduct: (product: any) => {},
-  getProducts: (_page: any) => {},
-  deleteProduct: (id: number) => {},
-  isProductDeleted: false,
-  editProduct: (product: any, id: number) => {},
-  getProductById: (id: number) => {},
 };
 
 const reducer = (state = INIT_STATE, action: any) => {
@@ -50,7 +32,7 @@ const LIMIT = 6;
 
 const API = "http://localhost:8000";
 
-const productContext = createContext<ProductContextI>(INIT_STATE);
+const productContext = createContext<any>(INIT_STATE);
 
 export const useProductContext = () => {
   return useContext(productContext);

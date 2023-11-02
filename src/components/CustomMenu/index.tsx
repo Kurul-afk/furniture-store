@@ -67,9 +67,6 @@ const CustomMenu = () => {
         {isAdmin && (
           <>
             <MenuItem onClick={handleAddProduct}>Добавить товар</MenuItem>
-            <MenuItem onClick={handleClose}>
-              Посмотреть всех пользователей
-            </MenuItem>
             <MenuItem onClick={handleShowAdminProductList}>
               Cписок всех товаров
             </MenuItem>
