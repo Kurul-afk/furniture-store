@@ -102,8 +102,8 @@ const Main = () => {
             <h3 className="main__works-title">Наши работы</h3>
             <button className="main__works-btn">Посмотреть все работы</button>
           </div>
-          <CustomCarousel />
         </div>
+        <CustomCarousel />
       </section>
       <section className="main__how">
         <div className="main__how-container">

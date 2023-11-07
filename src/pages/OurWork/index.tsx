@@ -1,6 +1,6 @@
 // OurWork.js
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import CustomCard from "../../components/CustomCard";
 import CustomPagination from "../../components/CustomPagination";
@@ -11,6 +11,7 @@ import CustomSearchInput from "../../components/CustomSearchInput";
 const OurWork = () => {
   const { products, getProducts } = useProductContext();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [productList, setProductList] = useState(products);
 
   useEffect(() => {
     getProducts(searchParams.get("_page") || 1);
@@ -19,9 +20,9 @@ const OurWork = () => {
   return (
     <div className="ourWork">
       <div className="ourWork__container">
-        <CustomSearchInput />
+        <CustomSearchInput setProductList={setProductList} />
         <ul className="ourWork__list">
-          {products.map((item: any) => (
+          {productList.map((item: any) => (
             <CustomCard product={item} key={item.key} />
           ))}
         </ul>

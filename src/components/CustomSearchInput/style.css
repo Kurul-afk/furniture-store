@@ -1,0 +1,19 @@
+.custom-search-input {
+  width: 50%;
+  margin: 0.6rem 0 !important;
+}
+.custom-search-input label {
+  color: #fff;
+}
+.custom-search-input .MuiFilledInput-underline:after {
+  border-bottom: 2px solid #e5890a;
+}
+.custom-search-input input {
+  color: #fff;
+}
+.custom-search-input .MuiFilledInput-underline:after {
+  border-bottom: 2px solid #e5890a;
+}
+.custom-search-input .MuiFormLabel-root.Mui-focused {
+  color: #e5890a;
+}

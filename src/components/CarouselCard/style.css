@@ -1,0 +1,16 @@
+.carousel__card {
+  margin: 1rem 1.2rem 0 0;
+  list-style-type: none;
+}
+.carousel__card__img {
+  width: 100%;
+}
+.carousel__card__text {
+  background-color: #201a1a;
+  min-height: 2.4rem;
+  padding: 0.6rem 0.4rem;
+}
+.carousel__card__title {
+  font-size: 18px;
+  color: #fff;
+}

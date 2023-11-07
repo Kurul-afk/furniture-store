@@ -5,10 +5,12 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { useProductContext } from "../../context/productContext";
 import "./style.css";
 import DeleteConfirmationModal from "../../components/WarningToDelete";
+import CustomSearchInput from "../../components/CustomSearchInput";
 
 const AdminProductList = () => {
   const { products, getProducts, isProductDeleted } = useProductContext();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [productList, setProductList] = useState(products);
 
   const navigate = useNavigate();
 
@@ -19,8 +21,9 @@ const AdminProductList = () => {
   return (
     <div className="adminProductList">
       <div className="adminProductList__container">
+        <CustomSearchInput setProductList={setProductList} />
         <ul className="adminProductList__list">
-          {products.map((item: any) => (
+          {productList.map((item: any) => (
             <div className="admin__CustomCard">
               <CustomCard product={item} key={item.key} />
               <div className="settings__btns">
