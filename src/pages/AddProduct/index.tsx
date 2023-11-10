@@ -30,7 +30,8 @@ const AddProduct = () => {
             rules={{ required: "Title is required" }}
             render={({ field }) => (
               <TextField
-                label="Title"
+                className="addProduct__textField"
+                label="Название"
                 error={!!errors.title}
                 helperText={errors.title?.message?.toString()}
                 {...field}
@@ -44,7 +45,8 @@ const AddProduct = () => {
             rules={{ required: "Description is required" }}
             render={({ field }) => (
               <TextField
-                label="Description"
+                className="addProduct__textField"
+                label="Описание"
                 multiline
                 rows={3}
                 defaultValue=""
@@ -61,7 +63,8 @@ const AddProduct = () => {
             rules={{ required: "Price is required" }}
             render={({ field }) => (
               <TextField
-                label="Price"
+                className="addProduct__textField"
+                label="Цена"
                 error={!!errors.price}
                 helperText={errors.price?.message?.toString()}
                 {...field}
@@ -75,7 +78,8 @@ const AddProduct = () => {
             rules={{ required: "URL img is required" }}
             render={({ field }) => (
               <TextField
-                label="URL img"
+                className="addProduct__textField"
+                label="URL картина"
                 error={!!errors.url_img}
                 helperText={errors.url_img?.message?.toString()}
                 {...field}

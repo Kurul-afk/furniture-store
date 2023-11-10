@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useProductContext } from "../../context/productContext";
 import { useParams } from "react-router-dom";
+import "./style.css";
 
 const EditProduct = () => {
   const {
@@ -35,10 +36,10 @@ const EditProduct = () => {
   return (
     <>
       {!loading ? (
-        <div className="addProduct">
-          <div className="addProduct__container">
+        <div className="editProduct">
+          <div className="editProduct__container">
             <form
-              className="addProduct__form"
+              className="editProduct__form"
               onSubmit={handleSubmit(onSubmit)}
             >
               <Controller
@@ -48,6 +49,7 @@ const EditProduct = () => {
                 rules={{ required: "Title is required" }}
                 render={({ field }) => (
                   <TextField
+                    className="editProduct__textField"
                     label="Title"
                     error={!!errors.title}
                     helperText={errors.title?.message?.toString()}
@@ -63,6 +65,7 @@ const EditProduct = () => {
                 rules={{ required: "Description is required" }}
                 render={({ field }) => (
                   <TextField
+                    className="editProduct__textField"
                     label="Description"
                     multiline
                     rows={3}
@@ -81,6 +84,7 @@ const EditProduct = () => {
                 rules={{ required: "Price is required" }}
                 render={({ field }) => (
                   <TextField
+                    className="editProduct__textField"
                     label="Price"
                     error={!!errors.price}
                     helperText={errors.price?.message?.toString()}
@@ -96,6 +100,7 @@ const EditProduct = () => {
                 rules={{ required: "URL img is required" }}
                 render={({ field }) => (
                   <TextField
+                    className="editProduct__textField"
                     label="URL img"
                     error={!!errors.url_img}
                     helperText={errors.url_img?.message?.toString()}

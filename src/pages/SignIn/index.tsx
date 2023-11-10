@@ -3,6 +3,7 @@ import { Controller, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../context/authContext";
 import { Button, TextField } from "@mui/material";
+import "./style.css";
 
 const SignIn = () => {
   const {
@@ -23,48 +24,52 @@ const SignIn = () => {
   };
 
   return (
-    <>
-      <h1>Sign In</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Controller
-          control={control}
-          name="email"
-          rules={{ required: "Email is required" }}
-          render={({ field }) => (
-            <TextField
-              label="email"
-              error={!!errors.email}
-              helperText={errors.email?.message?.toString()}
-              {...register("email", {
-                pattern: {
-                  value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-                  message: "Entered value does not match email format",
-                },
-              })}
-              {...field}
-              type="text"
-            />
-          )}
-        />
-        <Controller
-          control={control}
-          name="password"
-          rules={{ required: "password is required" }}
-          render={({ field }) => (
-            <TextField
-              label="password"
-              error={!!errors.password}
-              helperText={errors.password?.message?.toString()}
-              {...field}
-              type="text"
-            />
-          )}
-        />
-        <Button variant="outlined" type="submit">
-          Outlined
-        </Button>
-      </form>
-    </>
+    <div className="signIn">
+      <div className="signIn__container">
+        <h1 className="signIn__title">Логин</h1>
+        <form className="signIn__form" onSubmit={handleSubmit(onSubmit)}>
+          <Controller
+            control={control}
+            name="email"
+            rules={{ required: "Email is required" }}
+            render={({ field }) => (
+              <TextField
+                className="signIn__textField"
+                label="Почта"
+                error={!!errors.email}
+                helperText={errors.email?.message?.toString()}
+                {...register("email", {
+                  pattern: {
+                    value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                    message: "Entered value does not match email format",
+                  },
+                })}
+                {...field}
+                type="text"
+              />
+            )}
+          />
+          <Controller
+            control={control}
+            name="password"
+            rules={{ required: "password is required" }}
+            render={({ field }) => (
+              <TextField
+                className="signIn__textField"
+                label="Пароль"
+                error={!!errors.password}
+                helperText={errors.password?.message?.toString()}
+                {...field}
+                type="text"
+              />
+            )}
+          />
+          <Button variant="outlined" type="submit">
+            Подтвердить
+          </Button>
+        </form>
+      </div>
+    </div>
   );
 };
 

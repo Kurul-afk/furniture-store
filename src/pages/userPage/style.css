@@ -1,0 +1,20 @@
+.user__container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.user__window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #13101037;
+  border-radius: 5px;
+  padding: 2rem 0;
+}
+.user__avatar {
+  width: 20%;
+}
+.user__name {
+  font-size: 36px;
+  color: #131010;
+}

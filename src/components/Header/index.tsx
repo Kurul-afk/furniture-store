@@ -31,9 +31,6 @@ const Header = () => {
           <Link className="header__link" to={"/our-work"}>
             Наши продукты
           </Link>
-          <Link className="header__link" to={"/reviews"}>
-            Статьи
-          </Link>
           <Link className="header__link" to={"/contacts"}>
             Контакты
           </Link>
