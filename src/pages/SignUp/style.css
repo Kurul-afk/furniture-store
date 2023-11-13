@@ -17,3 +17,19 @@
 .signUp__textField {
   width: 100%;
 }
+.signUp__link {
+  font-size: 18px;
+}
+.signUp__link a {
+  text-decoration: none;
+  color: #f96666;
+}
+.signUp__btn {
+  border-color: #8b4513 !important;
+  color: #8b4513 !important;
+  transition: background-color 0.3s ease;
+}
+.signUp__btn:hover {
+  border-color: #654321 !important;
+  background-color: #ffffff00 !important;
+}

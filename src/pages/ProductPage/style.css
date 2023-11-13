@@ -42,3 +42,23 @@
   background-color: #ffffff00;
   cursor: pointer;
 }
+@media screen and (max-width: 1300px) {
+  .detail__img {
+    width: 50%;
+  }
+  .detail__text {
+    width: 40%;
+  }
+  .detail__title {
+    font-size: 2.2rem;
+    color: #fff;
+  }
+  .detail__cost {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  .detail__desc {
+    font-size: 1rem;
+    color: #fff;
+  }
+}

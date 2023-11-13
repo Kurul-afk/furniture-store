@@ -40,3 +40,16 @@ header {
   color: #fff;
   text-decoration: none;
 }
+.header__btn {
+  background-color: #8b4513 !important;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.header__btn:hover {
+  background-color: #654321 !important;
+}
+@media screen and (max-width: 1000px) {
+  .header__link {
+    display: none;
+  }
+}

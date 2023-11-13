@@ -1,0 +1,19 @@
+.error {
+  background-color: #201a1a;
+  padding: 5rem 0;
+}
+.error__container {
+  width: 80%;
+  margin: 0 auto;
+}
+.error__title {
+  text-align: center;
+  font-size: calc(15vw + 38px);
+  color: #ffc436;
+  opacity: 0.8;
+}
+.error__desc {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ffc436;
+}

@@ -64,7 +64,7 @@ const SignIn = () => {
               />
             )}
           />
-          <Button variant="outlined" type="submit">
+          <Button className="signIn__btn" variant="outlined" type="submit">
             Подтвердить
           </Button>
         </form>

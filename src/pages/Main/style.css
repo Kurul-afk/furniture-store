@@ -221,8 +221,8 @@ ol {
   width: 80%;
   margin: 0 auto;
 }
-.main__collabe-title{
-  color: #201A1A;
+.main__collabe-title {
+  color: #201a1a;
   font-family: Garamond;
   font-size: 36px;
   font-style: normal;
@@ -232,24 +232,24 @@ ol {
 }
 .main__collabe-list {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   counter-reset: num;
   gap: 4.5rem;
   margin-top: 3.5rem;
 }
-.main__faq{
-  background-color: #201A1A;
+.main__faq {
+  background-color: #201a1a;
   padding: 4.5rem 0;
 }
-.main__faq-container{
+.main__faq-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
-.main__faq-title{
-  color: #FFF;
+.main__faq-title {
+  color: #fff;
   font-family: Garamond;
   font-size: 36px;
   font-style: normal;
@@ -257,8 +257,353 @@ ol {
   line-height: 28px; /* 77.778% */
   text-transform: uppercase;
 }
-.main__faq-accordions{
+.main__faq-accordions {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media screen and (max-width: 1300px) {
+  .main__collabe-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    counter-reset: num;
+    gap: 4.5rem;
+    margin-top: 3.5rem;
+  }
+  .main__how-cards {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .main__how-card {
+    background-color: #fff;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .main__values-item p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .main__preview-title {
+    font-size: 1.6rem;
+  }
+  .main__about-title {
+    font-size: 32px;
+  }
+  .main__about-desc {
+    font-size: 18px;
+  }
+  .main__about-item div {
+    font-size: 34px;
+  }
+  .main__values-title {
+    font-size: 32px;
+  }
+  .main__values-list {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .main__values-item {
+    width: 40%;
+    flex-direction: row;
+  }
+  .carousel__card {
+    margin: 1rem 0.9rem 0 0;
+  }
+  .carousel__card__text {
+    padding: 0.4rem 0.4rem;
+  }
+  .carousel__card__title {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .main__collabe-list {
+    gap: 1rem;
+  }
+  .carousel__card__title {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .main__preview-title {
+    font-size: 1.4rem;
+    line-height: 20px;
+  }
+  .main__preview-btn {
+    padding: 1rem 2.8rem;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main__about-title {
+    font-size: 28px;
+    line-height: 20px;
+  }
+  .main__about-desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main__about-button {
+    padding: 1rem 2.8rem;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main__about-item div {
+    font-size: 28px;
+    line-height: 20px;
+  }
+  .main__about-item p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .main__values-title {
+    font-size: 28px;
+    line-height: 20px;
+  }
+  .main__values-item p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main__values-item img {
+    width: 3.5rem;
+  }
+  .main__works-btn {
+    padding: 1rem 2rem;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main__works-title {
+    font-size: 28px;
+    line-height: 20px;
+  }
+  .main__how-title {
+    font-size: 28px;
+    line-height: 20px;
+  }
+  .main__how-card p {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 1rem 0.5rem;
+  }
+  .main__collabe-title {
+    font-size: 28px;
+    line-height: 20px;
+  }
+  .main__collabe-item__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .main__collabe-item__desc {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .main__faq-title {
+    font-size: 28px;
+  }
+  .accordion-header h3 {
+    font-size: 18px;
+  }
+  .accordion-content {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .main__preview-title {
+    font-size: 1.2rem;
+    line-height: 20px;
+  }
+  .main__about-title {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  .main__about-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main__about-item div {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  .main__values-title {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  .main__values-item img {
+    width: 3rem;
+  }
+  .main__works-title {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  .main__how-title {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  .main__how-card p {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 1rem 0.5rem;
+  }
+  .main__collabe-title {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  .main__collabe-item__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main__faq-title {
+    font-size: 24px;
+  }
+  .accordion-header h3 {
+    font-size: 16px;
+  }
+  .accordion-content {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .main__collabe-container {
+    width: 90%;
+  }
+  .main__preview-btn {
+    padding: 0.8rem 2rem;
+  }
+  .main__about-button {
+    padding: 0.8rem 2rem;
+  }
+  .main__values-item {
+    flex-direction: column;
+  }
+  .main__values-item img {
+    width: 4rem;
+  }
+  .main__works-btn {
+    padding: 0.8rem 2rem;
+  }
+  .main__how-card {
+    width: 100%;
+  }
+  .main__how-card p {
+    font-size: 20px;
+  }
+  .main__collabe-list {
+    gap: 0.5rem;
+  }
+  .main__collabe-num {
+    font-size: 30px;
+  }
+  .main__collabe-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .main__collabe-item__title {
+    font-size: 12px;
+  }
+  .main__collabe-item__desc {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .main__preview {
+    padding: 3rem 0;
+  }
+
+  .main__preview-title {
+    font-size: 0.8rem;
+  }
+  .main__preview-btn {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    margin-top: 3rem;
+  }
+  .main__about {
+    padding: 3rem 0;
+  }
+  .main__about-container {
+    width: 90%;
+    gap: 2rem;
+  }
+  .main__about-title {
+    font-size: 18px;
+  }
+  .main__about-desc {
+    font-size: 10px;
+  }
+  .main__about-item div {
+    font-size: 18px;
+  }
+  .main__about-item p {
+    font-size: 8px;
+  }
+  .main__about-button {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+  .main__values {
+    padding: 2rem;
+  }
+  .main__values-container {
+    width: 90%;
+    gap: 2rem;
+  }
+  .main__values-title {
+    font-size: 18px;
+  }
+  .main__works-title {
+    font-size: 18px;
+  }
+  .main__works-btn {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+  }
+  .main__works {
+    padding: 2rem;
+  }
+  .main__works-container {
+    width: 90%;
+  }
+  .carousel__card__title {
+    font-size: 8px;
+  }
+  .main__how {
+    padding: 2rem;
+  }
+  .main__how-container {
+    width: 90%;
+    gap: 2rem;
+  }
+  .main__how-title {
+    font-size: 18px;
+  }
+  .main__how-card p {
+    font-size: 18px;
+    padding: 0.5rem;
+  }
+  .main__collabe {
+    padding: 2rem;
+  }
+  .main__collabe-title {
+    font-size: 18px;
+  }
+  .main__collabe-list {
+    margin-top: 2rem;
+  }
+  .main__faq {
+    padding: 2rem;
+  }
+  .main__faq-container {
+    width: 90%;
+    gap: 2rem;
+  }
+  .main__faq-title {
+    font-size: 18px;
+  }
+  .accordion-header h3 {
+    font-size: 14px;
+  }
+  .accordion-content {
+    font-size: 10px;
+  }
 }

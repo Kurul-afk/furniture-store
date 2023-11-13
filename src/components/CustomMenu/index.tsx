@@ -26,23 +26,6 @@ const CustomMenu = () => {
     handleLogOut(navigate);
     setAnchorEl(null);
   };
-
-  const userPage = () => {
-    navigate("/user-page");
-    setAnchorEl(null);
-  };
-
-  // Admin btn func
-
-  const handleAddProduct = () => {
-    navigate("/add-product");
-    setAnchorEl(null);
-  };
-
-  const handleShowAdminProductList = () => {
-    navigate("/admin-product-list");
-    setAnchorEl(null);
-  };
   return (
     <div>
       <Button
@@ -63,11 +46,57 @@ const CustomMenu = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={userPage}>Профиль</MenuItem>
+        <MenuItem
+          onClick={() => {
+            navigate("/user-page");
+            setAnchorEl(null);
+          }}
+        >
+          Профиль
+        </MenuItem>
+        <MenuItem
+          className="custom__links"
+          onClick={() => {
+            navigate("/about");
+            setAnchorEl(null);
+          }}
+        >
+          О нас
+        </MenuItem>
+        <MenuItem
+          className="custom__links"
+          onClick={() => {
+            navigate("/our-work");
+            setAnchorEl(null);
+          }}
+        >
+          Наши продукты
+        </MenuItem>
+        <MenuItem
+          className="custom__links"
+          onClick={() => {
+            navigate("/contacts");
+            setAnchorEl(null);
+          }}
+        >
+          Контакты
+        </MenuItem>
         {isAdmin && (
           <>
-            <MenuItem onClick={handleAddProduct}>Добавить товар</MenuItem>
-            <MenuItem onClick={handleShowAdminProductList}>
+            <MenuItem
+              onClick={() => {
+                navigate("/add-product");
+                setAnchorEl(null);
+              }}
+            >
+              Добавить товар
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                navigate("/admin-product-list");
+                setAnchorEl(null);
+              }}
+            >
               Cписок всех товаров
             </MenuItem>
           </>

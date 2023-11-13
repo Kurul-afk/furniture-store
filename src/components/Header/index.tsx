@@ -39,7 +39,11 @@ const Header = () => {
           {currentUser ? (
             <CustomMenu />
           ) : (
-            <Button variant="contained" onClick={() => navigate("/sign-up")}>
+            <Button
+              className="header__btn"
+              variant="contained"
+              onClick={() => navigate("/sign-up")}
+            >
               Зарегистрироваться
             </Button>
           )}

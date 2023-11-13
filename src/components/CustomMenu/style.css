@@ -1,6 +1,14 @@
 .MuiTouchRipple-root {
-    color: #fff;
+  color: #fff;
 }
 #basic-button:hover {
-    background-color: rgba(255, 255, 255, 0.07); 
+  background-color: rgba(255, 255, 255, 0.07);
+}
+.custom__links {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .custom__links {
+    display: block;
+  }
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@mui/base";
 import CustomCarousel from "../../components/CustomCarousel";
@@ -15,6 +14,7 @@ import howImg1 from "../../img/how1.png";
 import howImg2 from "../../img/how2.png";
 import howImg3 from "../../img/how3.png";
 import howImg4 from "../../img/how4.png";
+import "./style.css";
 interface howCardImg {
   how1: string;
   how2: string;

@@ -1,7 +1,7 @@
 import { Button, TextField } from "@mui/material";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../context/authContext";
 import "./style.css";
 
@@ -27,7 +27,7 @@ const SignUp = () => {
   return (
     <div className="signUp">
       <div className="signUp__container">
-        <h1 className="signUp__title">Sign up</h1>
+        <h1 className="signUp__title">Регистрация</h1>
         <form className="signUp__form" onSubmit={handleSubmit(onSubmit)}>
           <Controller
             control={control}
@@ -83,9 +83,12 @@ const SignUp = () => {
               />
             )}
           />
-          <Button variant="outlined" type="submit">
-            Outlined
+          <Button className="signUp__btn" variant="outlined" type="submit">
+            Потвердите
           </Button>
+          <p className="signUp__link">
+            Если у вас уже есть <Link to="/sign-in">аккаунт</Link>
+          </p>
         </form>
       </div>
     </div>
