@@ -42,7 +42,7 @@ const Footer = () => {
                   className="social-link"
                   to={"tg://resolve?domain=mebelkondoor"}
                 >
-                  <img style={{ width: "30px" }} src={vkIcon} />
+                  <img src={vkIcon} alt="img" />
                 </Link>
               </li>
               <li className="social-item">
@@ -50,7 +50,7 @@ const Footer = () => {
                   className="social-link"
                   to={"https://vk.com/kondoor_2004"}
                 >
-                  <img style={{ width: "30px" }} src={instagramIcon} />
+                  <img src={instagramIcon} alt="img" />
                 </Link>
               </li>
               <li className="social-item">
@@ -58,7 +58,7 @@ const Footer = () => {
                   className="social-link"
                   to={"https://vk.com/kondoor_2004"}
                 >
-                  <img style={{ width: "30px" }} src={whatsAppIcon} />
+                  <img src={whatsAppIcon} alt="img" />
                 </Link>
               </li>
             </ul>

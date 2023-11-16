@@ -3,9 +3,9 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Avatar } from "@mui/material";
-import "./style.css";
 import { useAuthContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
+import "./style.css";
 
 const CustomMenu = () => {
   const { handleLogOut, currentUser, isAdmin } = useAuthContext();

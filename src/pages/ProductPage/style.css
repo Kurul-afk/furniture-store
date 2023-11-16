@@ -61,4 +61,53 @@
     font-size: 1rem;
     color: #fff;
   }
+  .detail__btn {
+    width: 50%;
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .detail__img {
+    max-width: 400px;
+  }
+  .detail__text {
+    gap: 2rem;
+  }
+  .detail__title {
+    font-size: 1.8rem;
+  }
+  .detail__cost {
+    font-size: 1rem;
+  }
+  .detail__btn {
+    margin-top: 3.5rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .detail {
+    padding: 5rem 0;
+  }
+  .detail__text {
+    width: 45%;
+  }
+  .detail__title {
+    font-size: 1.4rem;
+  }
+  .detail__btn {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .detail__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .detail__img {
+    width: 100%;
+    max-width: 600px;
+  }
+  .detail__text {
+    width: 100%;
+  }
 }

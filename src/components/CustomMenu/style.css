@@ -5,10 +5,16 @@
   background-color: rgba(255, 255, 255, 0.07);
 }
 .custom__links {
-  display: none;
+  display: none !important;
 }
 @media screen and (max-width: 1000px) {
   .custom__links {
-    display: block;
+    display: block !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .custom__links {
+    font-size: 14px;
+    padding: 4px 12px;
   }
 }

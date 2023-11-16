@@ -3,9 +3,9 @@ import CustomPagination from "../../components/CustomPagination";
 import CustomCard from "../../components/CustomCard";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useProductContext } from "../../context/productContext";
-import "./style.css";
 import DeleteConfirmationModal from "../../components/WarningToDelete";
 import CustomSearchInput from "../../components/CustomSearchInput";
+import "./style.css";
 
 const AdminProductList = () => {
   const { products, getProducts, isProductDeleted } = useProductContext();

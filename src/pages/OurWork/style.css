@@ -13,3 +13,12 @@
   flex-wrap: wrap;
   gap: 2.5rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .ourWork__list {
+    gap: 2rem;
+  }
+  .card__title {
+    font-size: 18px;
+  }
+}

@@ -12,7 +12,6 @@ const CustomCard = ({ product }: any) => {
           <div className="card__text">
             <h3 className="card__title">{product.title}</h3>
             <p className="card__price">Цена: ${product.price}</p>
-            <p className="card__desc">{product.desc}</p>
           </div>
         </Link>
       </li>

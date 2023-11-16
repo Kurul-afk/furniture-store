@@ -33,3 +33,27 @@
   border-color: #654321 !important;
   background-color: #ffffff00 !important;
 }
+@media screen and (max-width: 700px) {
+  .signUp__container {
+    padding: 4rem 0;
+  }
+  .signUp__title {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 580px) {
+  .signUp__title {
+    font-size: 3rem;
+  }
+  .signUp__btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .signUp__container {
+    width: 90%;
+  }
+  .signUp__title {
+    font-size: 2rem;
+  }
+}

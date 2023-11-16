@@ -53,3 +53,27 @@ header {
     display: none;
   }
 }
+@media screen and (max-width: 700px) {
+  .header__logo {
+    font-size: 32px;
+  }
+  .header__logo img {
+    width: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header__btn {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header__btn {
+    font-size: 8px !important;
+  }
+  .header__logo {
+    font-size: 18px;
+  }
+  .header__logo img {
+    width: 14px;
+  }
+}
